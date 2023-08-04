@@ -2,14 +2,15 @@
   "tasks": {
     "dev": "DEVELOP=true deno run --allow-net=0.0.0.0:8000,aws.connect.psdb.cloud --allow-read=.env,.env.defaults,.env.example --allow-env --watch main.ts"
   },
+  "lock": false,
   "imports": {
     "std/": "https://deno.land/std@0.175.0/",
     "hono/": "https://deno.land/x/hono@v2.7.5/",
-    "planetscale": "npm:@planetscale/database@1.10.0",
-    "drizzle-orm": "npm:drizzle-orm@0.27.2",
-    "drizzle-orm/planetscale-serverless": "npm:drizzle-orm@0.27.2/planetscale-serverless",
-    "drizzle-orm/mysql-core": "npm:drizzle-orm@0.27.2/mysql-core",
-    "drizzle-zod": "npm:drizzle-zod@0.4.4"
+    "planetscale": "https://esm.sh/@planetscale/database@1.10.0",
+    "drizzle-orm": "https://esm.sh/drizzle-orm@0.27.2",
+    "drizzle-orm/planetscale-serverless": "https://esm.sh/drizzle-orm@0.27.2/planetscale-serverless",
+    "drizzle-orm/mysql-core": "https://esm.sh/drizzle-orm@0.27.2/mysql-core",
+    "drizzle-zod": "https://esm.sh/drizzle-zod@0.4.4"
   },
   "fmt": {
     "exclude": ["README.md"]
