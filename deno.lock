@@ -29,7 +29,8 @@
   "npm": {
     "specifiers": {
       "@planetscale/database@1.10.0": "@planetscale/database@1.10.0",
-      "drizzle-orm@0.27.2": "drizzle-orm@0.27.2"
+      "drizzle-orm@0.27.2": "drizzle-orm@0.27.2",
+      "drizzle-zod@0.4.4": "drizzle-zod@0.4.4_drizzle-orm@0.27.2_zod@3.21.4_@planetscale+database@1.10.0"
     },
     "packages": {
       "@planetscale/database@1.10.0": {
@@ -38,6 +39,23 @@
       },
       "drizzle-orm@0.27.2": {
         "integrity": "sha512-ZvBvceff+JlgP7FxHKe0zOU9CkZ4RcOtibumIrqfYzDGuOeF0YUY0F9iMqYpRM7pxnLRfC+oO7rWOUH3T5oFQA==",
+        "dependencies": {}
+      },
+      "drizzle-orm@0.27.2_@planetscale+database@1.10.0": {
+        "integrity": "sha512-ZvBvceff+JlgP7FxHKe0zOU9CkZ4RcOtibumIrqfYzDGuOeF0YUY0F9iMqYpRM7pxnLRfC+oO7rWOUH3T5oFQA==",
+        "dependencies": {
+          "@planetscale/database": "@planetscale/database@1.10.0"
+        }
+      },
+      "drizzle-zod@0.4.4_drizzle-orm@0.27.2_zod@3.21.4_@planetscale+database@1.10.0": {
+        "integrity": "sha512-XNn0mjQ306Hvg+CuyKV98wnsWBWeTqv+kgE/N79Zj0EdCvjD2kaoN5sFDGFkMVqPQuP7IB1IPs0lEcOij1RvBA==",
+        "dependencies": {
+          "drizzle-orm": "drizzle-orm@0.27.2_@planetscale+database@1.10.0",
+          "zod": "zod@3.21.4"
+        }
+      },
+      "zod@3.21.4": {
+        "integrity": "sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==",
         "dependencies": {}
       }
     }

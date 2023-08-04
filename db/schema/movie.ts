@@ -7,6 +7,7 @@ import {
   text,
   varchar,
 } from "drizzle-orm/mysql-core";
+import { createInsertSchema } from "drizzle-zod";
 
 export const movieTable = mysqlTable("tbl_movieinfo", {
   id: serial("id").autoincrement().primaryKey(),
@@ -25,3 +26,7 @@ export const movieTable = mysqlTable("tbl_movieinfo", {
 
 export type Movie = InferModel<typeof movieTable>;
 export type NewMovie = InferModel<typeof movieTable, "insert">;
+
+export const validateInsertMovieSchema = (movie: NewMovie) => {
+  return createInsertSchema(movieTable).safeParse(movie);
+};
